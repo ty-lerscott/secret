@@ -12,7 +12,7 @@ const fillArrayWithSecrets = (array: string[], secretFunc: () => string) => {
         return secretFunc();
     })
 }
-export async function GET(req: NextRequest, { params }: { params: { type: string } }) {
+export async function GET(req: NextRequest) {
     try {
         const params = new URLSearchParams(req.nextUrl.searchParams);
         const type = params.get('type');
