@@ -40,7 +40,9 @@ export async function GET(req: NextRequest, { params }: { params: { type: string
                 break;
         }
         return NextResponse.json({
-            secret
+            type,
+            count,
+            ids: secret
         })
     } catch (err) {
         return NextResponse.json({
